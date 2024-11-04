@@ -1,0 +1,60 @@
+{% extends "index.html" %}
+
+
+{% block title %} Gestion materias {% endblock %}
+
+{% block cuerpo %}
+<dif class="row"> <!--la fila-->
+    <div class="col-sm-12  col-md-4 col-lg-4 col-xl-4"> <!--colomna izq-->
+        
+        <h1>Mama</h1>
+                <!--  la tabla  -->
+                
+    </div><!--colomna izq-->
+
+
+
+
+
+<div class="row"> 
+    <div class="col-sm-12  col-md-8 col-lg-8 col-xl-8"> <!--colomna derecha-->
+        
+        <h1>Papa</h1>
+                <!--  la tabla  -->
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">codigo</th>
+                        <th scope="col">nombre</th>
+                        <th scope="col">creditos</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+    </div><!--colomna derecha-->
+</div>
+</dif><!--la fila-->
+{% for m in lasmaterias %}
+
+<li>{{m.nombre}}.-.-.-.{{m.codigo}}.-.-.-.{{m.creditos}}</li>
+{% endfor %}
+{% endblock %}
